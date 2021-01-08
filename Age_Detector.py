@@ -10,7 +10,6 @@ def func(ageYear):                          # function definition
     
     
     if len(ageYear)==4:
-#        currentYear = 2020
         if int(ageYear) > currentYear:
             print(f"Are you Ghost! You are not born yet!\n This is {currentYear}")
             quit()
@@ -20,21 +19,19 @@ def func(ageYear):                          # function definition
             print(f"You are now {current_age} year old")
             n = 100 - current_age
             century = currentYear + n
-            if century > 2020:
+            if century > currentYear:
                 print(f"You will turn 100 year in {century}")
             else:
                 print(f"You turned 100 in {century}")
 
     elif int(ageYear) >= 0 or int(ageYear) <= 125:
-        
- #       currentYear = 2020
         current_age = int(ageYear)
         if current_age > 100:
             print(f"You seems too old ...")
         print(f"You are now {current_age} year old ")
         n = 100 - current_age
         century = currentYear + n
-        if century > 2020:
+        if century > currentYear:
             print(f"You will turn 100 in {century}")
         else:
             print(f"You turned 100 in {century}")
@@ -45,7 +42,6 @@ def func(ageYear):                          # function definition
     if inp == 'n':
         quit()
     elif inp == 'y':
-#        currentYear = 2020
         if len(ageYear) == 4:
             year = int(input("Enter the year : "))
             y = year-int(ageYear)
@@ -54,8 +50,7 @@ def func(ageYear):                          # function definition
             else:
                 print(f"You were {y} year in {year}")
         else:
-            year = int(input("Enter the year : "))
-		            
+            year = int(input("Enter the year : ")) 
             if year > currentYear:
                 year_current =currentYear-int(ageYear) 
                 year_current=year-year_current
