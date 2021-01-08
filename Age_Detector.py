@@ -1,4 +1,7 @@
+import datetime
+d=datetime.date.today()
 
+currentYear=d.year
 print("...WELCOME TO AGE CALCULATOR...")
 
 def func(ageYear):                          # function definition
@@ -7,7 +10,7 @@ def func(ageYear):                          # function definition
     
     
     if len(ageYear)==4:
-        currentYear = 2020
+#        currentYear = 2020
         if int(ageYear) > currentYear:
             print(f"Are you Ghost! You are not born yet!\n This is {currentYear}")
             quit()
@@ -24,7 +27,7 @@ def func(ageYear):                          # function definition
 
     elif int(ageYear) >= 0 or int(ageYear) <= 125:
         
-        currentYear = 2020
+ #       currentYear = 2020
         current_age = int(ageYear)
         if current_age > 100:
             print(f"You seems too old ...")
@@ -42,7 +45,7 @@ def func(ageYear):                          # function definition
     if inp == 'n':
         quit()
     elif inp == 'y':
-        currentYear = 2020
+#        currentYear = 2020
         if len(ageYear) == 4:
             year = int(input("Enter the year : "))
             y = year-int(ageYear)
@@ -52,16 +55,16 @@ def func(ageYear):                          # function definition
                 print(f"You were {y} year in {year}")
         else:
             year = int(input("Enter the year : "))
-            
+		            
             if year > currentYear:
-                year_current = year-2020
-                year_current += 100 
+                year_current =currentYear-int(ageYear) 
+                year_current=year-year_current
                 print(f"You will be {year_current} year in {year} ")
             else:
-                year_current = 2020-year
-                year_current += 100 
+                year_current = currentYear-int(ageYear)
+                year_current=year-year_current
                 print(f"You were {year_current} year in {year}")
 
-     
 ageYear=input("Enter your age or year of birth ")   # taking input
-print(func(ageYear))                                # calling function
+func(ageYear)                                # calling function
+
